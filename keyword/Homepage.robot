@@ -1,5 +1,5 @@
 *** Settings ***
-Library SeleniumLibrary
+Library     SeleniumLibrary
 
 *** Variables ***
 ${PRACTICE_FORM_SUCCESS_MESSAGE}    Thanks for submitting the form

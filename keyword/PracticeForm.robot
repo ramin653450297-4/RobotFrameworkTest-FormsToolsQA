@@ -7,9 +7,10 @@ ${file_path}    ${CURDIR}${/}cat.jpg
 
 *** Keywords ***
 When use practice form to DemoQA platform with ${practice_firstname}, ${practice_lastname}, ${practice_email}, ${practice_mobilenum}, ${practice_subjects}, ${practice_address}
-    Scroll To Forms
-    Click Forms
-    Click Practice Form
+    #Scroll To Forms
+    #Click Forms
+    #Click Practice Form
+    Scroll To Practice Form
     Input Firstname     ${practice_firstname}
     Input Lastname      ${practice_lastname}
     Input Email         ${practice_email}
@@ -24,16 +25,24 @@ When use practice form to DemoQA platform with ${practice_firstname}, ${practice
     Select City 
     Submit Practice Form
 
-Scroll To Forms
-    Scroll Element Into View    xpath=//*[text()='Forms']
-    Sleep    1
+# Scroll To Forms
+#     Wait Until Element Is Visible    xpath=//*[text()='Forms']    5s
+#     Execute JavaScript               arguments[0].scrollIntoView(true);    xpath=//*[text()='Forms']
+#     Sleep    2
 
-Click Forms
-   Wait Until Page Contains Element 	 xpath=//*[text()='Forms']
 
-Click Practice Form
-    Wait Until Page Contains Element    xpath=//*[text()='Practice Form']
+# Click Forms
+#    Wait Until Page Contains Element 	 xpath=//*[text()='Forms']    5s
+#    Click Element        xpath=//*[text()='Forms']
 
+# Click Practice Form
+#     Wait Until Page Contains Element    xpath=//*[text()='Practice Form']       5s
+#     Click Element       xpath=//*[text()='Practice Form']
+
+Scroll To Practice Form
+    Wait Until Element Is Visible       xpath=//*[text()='Student Registration Form']       5s
+    Execute JavaScript   arguments[0].scrollIntoView(true);   xpath=//*[text()='Student Registration Form']       
+    Sleep    2
 Input Firstname
     [Arguments]     ${practice_firstname}
     Input Text      id:firstName    ${practice_firstname}
@@ -44,7 +53,7 @@ Input Lastname
 
 Input Email
     [Arguments]     ${practice_email}
-    Input Text      id:uerEmail     ${practice_email}
+    Input Text      id:userEmail     ${practice_email}
 
 Select Gender
     Click Element    xpath=//label[text()='Male']
@@ -54,10 +63,11 @@ Input Mobile Number
     Input Text    id:userNumber     ${practice_mobilenum}
 
 Select Date of Birth
+    [Arguments]   ${practice_date}   ${practice_month}   ${practice_year}
     Click Element    id:dateOfBirthInput
-    Select From Dropdown    xpath=//select[@class='react-datepicker__month-select']    ${DATA.practice_month}
-    Select From Dropdown    xpath=//select[@class='react-datepicker__year-select']    ${DATA.practice_year}
-    Click Element          xpath=//div[contains(@class, 'react-datepicker__day') and not(contains(@class, 'outside-month')) and text()='${DATA.practice_date}']
+    Select From Dropdown    xpath=//select[@class='react-datepicker__month-select']    ${practice_month}
+    Select From Dropdown    xpath=//select[@class='react-datepicker__year-select']    ${practice_year}
+    Click Element          xpath=//div[contains(@class, 'react-datepicker__day') and not(contains(@class, 'outside-month')) and text()='${practice_date}']
 
 Input Subjects     
     [Arguments]     ${practice_subjects}
@@ -71,7 +81,7 @@ Upload File
     Choose File    id:uploadPicture    ${file_path}
 
 Input Address       
-    [Arguments]     ${practice_address }
+    [Arguments]     ${practice_address}
     Input Text    id:currentAddress     ${practice_address }
 
 Select State

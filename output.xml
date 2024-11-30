@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.1.1 (Python 3.13.0 on win32)" generated="2024-11-30T12:00:52.496846" rpa="false" schemaversion="5">
+<suite id="s1" name="Test Practice Form" source="C:\Users\Acer\Documents\GitHub\RobotFrameworkTest-FormsToolsQA\tests\test_practice_form.robot">
+<kw name="Open Browser" owner="SeleniumLibrary" type="SETUP">
+<msg time="2024-11-30T12:00:52.918306" level="INFO">Opening browser 'chrome' to base url 'https://demoqa.com/automation-practice-form'.</msg>
+<arg>${baseUrl}</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-11-30T12:00:52.917932" elapsed="15.023101"/>
+</kw>
+<test id="s1-t1" name="As a user, I want to practice form with valid data" line="11">
+<kw name="When use practice form to DemoQA platform with ${practice_firstname}, ${practice_lastname}, ${practice_email}, ${practice_mobilenum}, ${practice_subjects}, ${practice_address}" owner="PracticeForm" source_name="When use practice form to DemoQA platform with ${practice_firstname}, ${practice_lastname}, ${practice_email}, ${practice_mobilenum}, ${practice_subjects}, ${practice_address}">
+<kw name="Scroll To Practice Form" owner="PracticeForm">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//*[text()='Student Registration Form']</arg>
+<arg>5s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-11-30T12:01:07.946287" elapsed="0.055680"/>
+</kw>
+<kw name="Execute Javascript" owner="SeleniumLibrary">
+<msg time="2024-11-30T12:01:08.003701" level="INFO">Executing JavaScript:
+arguments[0].scrollIntoView(true);xpath=//*[text()='Student Registration Form']
+Without any arguments.</msg>
+<msg time="2024-11-30T12:01:08.172446" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-2.png"&gt;&lt;img src="selenium-screenshot-2.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2024-11-30T12:01:08.172792" level="FAIL">JavascriptException: Message: javascript error: Unexpected token '}'
+  (Session info: chrome=131.0.6778.86)
+Stacktrace:
+	GetHandleVerifier [0x00007FF63DBF6CB5+28821]
+	(No symbol) [0x00007FF63DB63840]
+	(No symbol) [0x00007FF63DA0578A]
+	(No symbol) [0x00007FF63DA0C2ED]
+	(No symbol) [0x00007FF63DA0F308]
+	(No symbol) [0x00007FF63DAA06B0]
+	(No symbol) [0x00007FF63DA7F2FA]
+	(No symbol) [0x00007FF63DA9F412]
+	(No symbol) [0x00007FF63DA7F0A3]
+	(No symbol) [0x00007FF63DA4A778]
+	(No symbol) [0x00007FF63DA4B8E1]
+	GetHandleVerifier [0x00007FF63DF2FCAD+3408013]
+	GetHandleVerifier [0x00007FF63DF4741F+3504127]
+	GetHandleVerifier [0x00007FF63DF3B5FD+3455453]
+	GetHandleVerifier [0x00007FF63DCBBDBB+835995]
+	(No symbol) [0x00007FF63DB6EB5F]
+	(No symbol) [0x00007FF63DB6A814]
+	(No symbol) [0x00007FF63DB6A9AD]
+	(No symbol) [0x00007FF63DB5A199]
+	BaseThreadInitThunk [0x00007FF8A70B259D+29]
+	RtlUserThreadStart [0x00007FF8A840AF38+40]
+</msg>
+<arg>arguments[0].scrollIntoView(true);</arg>
+<arg>xpath=//*[text()='Student Registration Form']</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="FAIL" start="2024-11-30T12:01:08.002347" elapsed="0.175230">JavascriptException: Message: javascript error: Unexpected token '}'
+  (Session info: chrome=131.0.6778.86)
+Stacktrace:
+	GetHandleVerifier [0x00007FF63DBF6CB5+28821]
+	(No symbol) [0x00007FF63DB63840]
+	(No symbol) [0x00007FF63DA0578A]
+	(No symbol) [0x00007FF63DA0C2ED]
+	(No symbol) [0x00007FF63DA0F308]
+	(No symbol) [0x00007FF63DAA06B0]
+	(No symbol) [0x00007FF63DA7F2FA]
+	(No symbol) [0x00007FF63DA9F412]
+	(No symbol) [0x00007FF63DA7F0A3]
+	(No symbol) [0x00007FF63DA4A778]
+	(No symbol) [0x00007FF63DA4B8E1]
+	GetHandleVerifier [0x00007FF63DF2FCAD+3408013]
+	GetHandleVerifier [0x00007FF63DF4741F+3504127]
+	GetHandleVerifier [0x00007FF63DF3B5FD+3455453]
+	GetHandleVerifier [0x00007FF63DCBBDBB+835995]
+	(No symbol) [0x00007FF63DB6EB5F]
+	(No symbol) [0x00007FF63DB6A814]
+	(No symbol) [0x00007FF63DB6A9AD]
+	(No symbol) [0x00007FF63DB5A199]
+	BaseThreadInitThunk [0x00007FF8A70B259D+29]
+	RtlUserThreadStart [0x00007FF8A840AF38+40]
+</status>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2024-11-30T12:01:08.177897" elapsed="0.000065"/>
+</kw>
+<status status="FAIL" start="2024-11-30T12:01:07.945679" elapsed="0.232531">JavascriptException: Message: javascript error: Unexpected token '}'
+  (Session info: chrome=131.0.6778.86)
+Stacktrace:
+	GetHandleVerifier [0x00007FF63DBF6CB5+28821]
+	(No symbol) [0x00007FF63DB63840]
+	(No symbol) [0x00007FF63DA0578A]
+	(No symbol) [0x00007FF63DA0C2ED]
+	(No symbol) [0x00007FF63DA0F308]
+	(No symbol) [0x00007FF63DAA06B0]
+	(No symbol) [0x00007FF63DA7F2FA]
+	(No symbol) [0x00007FF63DA9F412]
+	(No symbol) [0x00007FF63DA7F0A3]
+	(No symbol) [0x00007FF63DA4A778]
+	(No symbol) [0x00007FF63DA4B8E1]
+	GetHandleVerifier [0x00007FF63DF2FCAD+3408013]
+	GetHandleVerifier [0x00007FF63DF4741F+3504127]
+	GetHandleVerifier [0x00007FF63DF3B5FD+3455453]
+	GetHandleVerifier [0x00007FF63DCBBDBB+835995]
+	(No symbol) [0x00007FF63DB6EB5F]
+	(No symbol) [0x00007FF63DB6A814]
+	(No symbol) [0x00007FF63DB6A9AD]
+	(No symbol) [0x00007FF63DB5A199]
+	BaseThreadInitThunk [0x00007FF8A70B259D+29]
+	RtlUserThreadStart [0x00007FF8A840AF38+40]
+</status>
+</kw>
+<kw name="Input Firstname" owner="PracticeForm">
+<arg>${practice_firstname}</arg>
+<status status="NOT RUN" start="2024-11-30T12:01:08.178509" elapsed="0.000075"/>
+</kw>
+<kw name="Input Lastname" owner="PracticeForm">
+<arg>${practice_lastname}</arg>
+<status status="NOT RUN" start="2024-11-30T12:01:08.178824" elapsed="0.000048"/>
+</kw>
+<kw name="Input Email" owner="PracticeForm">
+<arg>${practice_email}</arg>
+<status status="NOT RUN" start="2024-11-30T12:01:08.179038" elapsed="0.000041"/>
+</kw>
+<kw name="Select Gender" owner="PracticeForm">
+<status status="NOT RUN" start="2024-11-30T12:01:08.179291" elapsed="0.000056"/>
+</kw>
+<kw name="Input Mobile Number ${practice_mobilenum}">
+<status status="NOT RUN" start="2024-11-30T12:01:08.179795" elapsed="0.000056"/>
+</kw>
+<kw name="Select Date of Birth" owner="PracticeForm">
+<status status="NOT RUN" start="2024-11-30T12:01:08.180073" elapsed="0.000050"/>
+</kw>
+<kw name="Input Subjects" owner="PracticeForm">
+<arg>${practice_subjects}</arg>
+<status status="NOT RUN" start="2024-11-30T12:01:08.180369" elapsed="0.000046"/>
+</kw>
+<kw name="Select Hobbies" owner="PracticeForm">
+<status status="NOT RUN" start="2024-11-30T12:01:08.180591" elapsed="0.000041"/>
+</kw>
+<kw name="Upload File" owner="PracticeForm">
+<status status="NOT RUN" start="2024-11-30T12:01:08.180786" elapsed="0.000034"/>
+</kw>
+<kw name="Input Address" owner="PracticeForm">
+<arg>${practice_address }</arg>
+<status status="NOT RUN" start="2024-11-30T12:01:08.180953" elapsed="0.000038"/>
+</kw>
+<kw name="Select State" owner="PracticeForm">
+<status status="NOT RUN" start="2024-11-30T12:01:08.181226" elapsed="0.000043"/>
+</kw>
+<kw name="Select City" owner="PracticeForm">
+<status status="NOT RUN" start="2024-11-30T12:01:08.181433" elapsed="0.000046"/>
+</kw>
+<kw name="Submit Practice Form" owner="PracticeForm">
+<status status="NOT RUN" start="2024-11-30T12:01:08.181639" elapsed="0.000040"/>
+</kw>
+<status status="FAIL" start="2024-11-30T12:01:07.943386" elapsed="0.238532">JavascriptException: Message: javascript error: Unexpected token '}'
+  (Session info: chrome=131.0.6778.86)
+Stacktrace:
+	GetHandleVerifier [0x00007FF63DBF6CB5+28821]
+	(No symbol) [0x00007FF63DB63840]
+	(No symbol) [0x00007FF63DA0578A]
+	(No symbol) [0x00007FF63DA0C2ED]
+	(No symbol) [0x00007FF63DA0F308]
+	(No symbol) [0x00007FF63DAA06B0]
+	(No symbol) [0x00007FF63DA7F2FA]
+	(No symbol) [0x00007FF63DA9F412]
+	(No symbol) [0x00007FF63DA7F0A3]
+	(No symbol) [0x00007FF63DA4A778]
+	(No symbol) [0x00007FF63DA4B8E1]
+	GetHandleVerifier [0x00007FF63DF2FCAD+3408013]
+	GetHandleVerifier [0x00007FF63DF4741F+3504127]
+	GetHandleVerifier [0x00007FF63DF3B5FD+3455453]
+	GetHandleVerifier [0x00007FF63DCBBDBB+835995]
+	(No symbol) [0x00007FF63DB6EB5F]
+	(No symbol) [0x00007FF63DB6A814]
+	(No symbol) [0x00007FF63DB6A9AD]
+	(No symbol) [0x00007FF63DB5A199]
+	BaseThreadInitThunk [0x00007FF8A70B259D+29]
+	RtlUserThreadStart [0x00007FF8A840AF38+40]
+</status>
+</kw>
+<kw name="Then Practice form should display message as &quot;Thanks for submitting the form&quot;">
+<status status="NOT RUN" start="2024-11-30T12:01:08.182687" elapsed="0.000071"/>
+</kw>
+<status status="FAIL" start="2024-11-30T12:01:07.941475" elapsed="0.241990">JavascriptException: Message: javascript error: Unexpected token '}'
+  (Session info: chrome=131.0.6778.86)
+Stacktrace:
+	GetHandleVerifier [0x00007FF63DBF6CB5+28821]
+	(No symbol) [0x00007FF63DB63840]
+	(No symbol) [0x00007FF63DA0578A]
+	(No symbol) [0x00007FF63DA0C2ED]
+	(No symbol) [0x00007FF63DA0F308]
+	(No symbol) [0x00007FF63DAA06B0]
+	(No symbol) [0x00007FF63DA7F2FA]
+	(No symbol) [0x00007FF63DA9F412]
+	(No symbol) [0x00007FF63DA7F0A3]
+	(No symbol) [0x00007FF63DA4A778]
+	(No symbol) [0x00007FF63DA4B8E1]
+	GetHandleVerifier [0x00007FF63DF2FCAD+3408013]
+	GetHandleVerifier [0x00007FF63DF4741F+3504127]
+	GetHandleVerifier [0x00007FF63DF3B5FD+3455453]
+	GetHandleVerifier [0x00007FF63DCBBDBB+835995]
+	(No symbol) [0x00007FF63DB6EB5F]
+	(No symbol) [0x00007FF63DB6A814]
+	(No symbol) [0x00007FF63DB6A9AD]
+	(No symbol) [0x00007FF63DB5A199]
+	BaseThreadInitThunk [0x00007FF8A70B259D+29]
+	RtlUserThreadStart [0x00007FF8A840AF38+40]
+</status>
+</test>
+<test id="s1-t2" name="Test YAML Load" line="16">
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-11-30T12:01:08.189428" level="INFO">https://demoqa.com/automation-practice-form</msg>
+<arg>${baseUrl}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-11-30T12:01:08.188954" elapsed="0.000579"/>
+</kw>
+<status status="PASS" start="2024-11-30T12:01:08.188306" elapsed="0.001685"/>
+</test>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-11-30T12:01:08.192349" elapsed="2.250619"/>
+</kw>
+<status status="FAIL" start="2024-11-30T12:00:52.498990" elapsed="17.944171"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="1" skip="0" id="s1" name="Test Practice Form">Test Practice Form</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

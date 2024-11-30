@@ -5,9 +5,9 @@ Library     SeleniumLibrary
 ${PRACTICE_FORM_SUCCESS_MESSAGE}    Thanks for submitting the form
 
 *** Keywords ***
-Open ToolsQA Homepage
-    [Arguments]     ${url}
-    Open Browser    ${url}      chrome
+Open DemoQA Homepage
+    [Arguments]     ${baseUrl}
+    Open Browser    ${baseUrl}      chrome
     Maximize Browser Window
 
 Verify Practice Form Success
